@@ -1,0 +1,25 @@
+---
+title: "RMarkdown ploty presentation"
+author: "Abdul Rasheed Narejo"
+date: "02/09/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+#### Load libraries
+```{r, message = FALSE, echo=TRUE}
+library(plotly)
+```
+
+## 
+#### Plot using plotly
+```{r, echo = TRUE}
+plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, type="scatter",
+        mode="markers", color = ~Species)
+```
+
+
